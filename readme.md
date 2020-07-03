@@ -7,10 +7,7 @@ RESTful API Designed in Laravel for a very simple Student Information applicatio
 -   [Requirements](#requirements)
 -   [Installation](#installation)
 -   [Schema](#schema)
--   [Authentication](#authentication)
 -   [Root End-Point](#root-end-point)
--   [Core Resources](#core-resources)
--   [Documentation](#documentation)
 -   [Request & Response Examples](#request--response-examples)
 
 ## Requirements
@@ -107,4 +104,4 @@ RESTful API Designed in Laravel for a very simple Student Information applicatio
 | `GET`  | `/student/view/:id` | Fetch a specific _student_ |
 | `PUT`  | `/student/edit/:id` | Edit existing _student_    |
 
-To be Updated...
+Request and Responses To be Updated...

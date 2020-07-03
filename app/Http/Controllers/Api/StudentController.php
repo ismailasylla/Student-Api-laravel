@@ -14,7 +14,7 @@ class StudentController extends Controller
 		$validator = Validator::make($req->all(), [
             "first_name" => "required",
             "last_name" => "required",
-            'class' => "required|numeric|exists:classes,id",
+            'class' => "required|numeric|exists:classes,code",
             'date_of_birth' => "required|date",
         ]);
 
@@ -28,7 +28,7 @@ class StudentController extends Controller
 
         }else{
             $student=Student::createStudent($req->all());
-            $class=SClass::find($req->class);
+            $class=SClass::where('code',$req->class)->first();
            if(count($class->students)<10){
            	    if($student){
 	                $response=array(

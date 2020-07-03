@@ -8,7 +8,7 @@ class Student extends Model
 {
    protected $fillable=['first_name','last_name','class','date_of_birth'];
    public function classData(){
-   	return $this->belongsto('App\SClass','class','id');
+   	return $this->belongsto('App\SClass','class','code');
    }
    public static function createStudent($data){
    	$student=Student::create([
@@ -17,6 +17,9 @@ class Student extends Model
                 'class'=>$data['class'],
                 'date_of_birth'=>$data['date_of_birth'],
             ]);
+   	$student_class_data=$student->classData;
+    $student->class=$student_class_data->code;
+    $student->class_data=$student_class_data;
    	return $student;
    }
    public static function updateStudent($data){
@@ -35,6 +38,9 @@ class Student extends Model
 			$student->code=$data['date_of_birth'];
     	}
     	$student->save();
+    	$student_class_data=$student->classData;
+    	$student->class=$student_class_data->code;
+    	$student->class_data=$student_class_data;
     	return $student;
    }
 }

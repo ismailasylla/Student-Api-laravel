@@ -21,11 +21,13 @@ class SClass extends Model
 	   	return $class;
    }
    public static function updateClass($data){
+
    	$class=SClass::find($data['id']);
    	if(isset($data['name']) && $data['name']){
 			$class['name']=$data['name'];
 		}
-		if(isset($data['status']) && $data['status'] && ($data['status']=='opened') || ($data['status']=='closed')){
+	
+		if(isset($data['status']) && $data['status'] && ($data['status']=='opened' || $data['status']=='closed')){
 			$class['status']=$data['status'];
 		}
 		if(isset($data['code']) && $data['code']){

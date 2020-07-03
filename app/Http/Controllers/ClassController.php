@@ -22,7 +22,7 @@ class ClassController extends Controller
             );
 
         }else{
-            $class=Class::create([
+            $class=SClass::create([
                 'code'=>$req->code,
                 'name'=>$req->name,
                 'status'=>$req->status,
@@ -35,7 +35,7 @@ class ClassController extends Controller
                     'message'=>'class created successfully',
                 );
             }else{
-               
+
                 $response=array(
                     'status'=>false,
                     'code'=>500,
@@ -46,12 +46,12 @@ class ClassController extends Controller
         return response()->json($response);
     }
     public function edit(){
-    	
+
     }
     public function list(){
-    	
+
     }
     public function view(){
-    	
+
     }
 }

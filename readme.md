@@ -7,7 +7,7 @@ RESTful API Designed in Laravel for a very simple Student Information applicatio
 -   [Requirements](#requirements)
 -   [Installation](#installation)
 -   [Schema](#schema)
--   [Root End-Point](#root-end-point)
+-   [Root End-Point](#End-Points)
 -   [Request & Response Examples](#request--response-examples)
 
 ## Requirements
@@ -95,7 +95,9 @@ RESTful API Designed in Laravel for a very simple Student Information applicatio
 }
 ```
 
-#### End-Points Please check the routes api for the rest of the endpoints
+#### End-Points
+
+#### Please check the routes api for the rest of the endpoints
 
 | Method | End-Point           | Description                |
 | ------ | ------------------- | -------------------------- |

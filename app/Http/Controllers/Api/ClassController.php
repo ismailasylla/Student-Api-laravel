@@ -10,7 +10,7 @@ class ClassController extends Controller
 {
    public function add(Request $req){
 		$validator = Validator::make($req->all(), [
-            "code" => "required|unique:classes,code",
+            "code" => "required|unique:classes,code|numeric",
             "name" => "required",
             'status' => "required|in:opened,closed",
         ]);

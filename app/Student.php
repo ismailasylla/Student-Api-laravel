@@ -8,7 +8,7 @@ class Student extends Model
 {
    protected $fillable=['first_name','last_name','class','date_of_birth'];
    public function classData(){
-   	return $this->belongsto('App\SClass','class','id');
+   	return $this->belongsto('App\SClass','class','code');
    }
    public static function createStudent($data){
    	$student=Student::create([

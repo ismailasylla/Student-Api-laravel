@@ -57,7 +57,7 @@ class StudentController extends Controller
 		                    'message'=>'student not added because class reach the maximum student limit',
 		                );
            }
-            
+
         }
         return response()->json($response,$code)->header('Content-Type', 'application/x-www-form-urlencoded')
                   ->header('Access-Control-Allow-Origin', '*');
@@ -118,8 +118,9 @@ class StudentController extends Controller
                 'message'=>'Data of all the students with class.',
                 'data'=>$students
             );
-    	 return response()->json($students,$code)->header('Content-Type', 'application/x-www-form-urlencoded')
-                  ->header('Access-Control-Allow-Origin', '*');
+    	//  return response()->json($students,$code)->header('Content-Type', 'application/x-www-form-urlencoded')->header('Access-Control-Allow-Origin', '*');
+    	 return response()->json($students,$code)->header('Access-Control-Allow-Origin', '*');
+
     }
     public function view(Request $req){
     	$validator = Validator::make($req->all(), [
